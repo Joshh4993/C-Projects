@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+	const PI = 3.14159265;
+	int diameter = 15;
+
+	float radius = (float) diameter / 2;
+	float area = (float) PI * (radius * radius);
+
+	printf("The area of the circle with diameter %d is:\n\n", diameter);
+	printf("%.2f", area);
+
+	return 0;
+}

@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void menu();
+void loadHiScore();
+void saveHiScore();
+void play();
+int cpuChoice();
+int random(int min, int max);
+
+
+
+
+FILE *fptr;
+int hiScore;
+enum Options {
+	Rock = 1,
+	Paper,
+	Scissors
+};
+
+
+int main() {
+	// Program entry point
+	loadHiScore();
+	menu();
+}
+
+void menu() {
+	// Main menu
+	printf("Welcome to rock, paper, scissors!\n\n");
+
+	int userOpt;
+
+	printf("1. Play\n2.Quit");
+	scanf("%d", &userOpt);
+	switch (userOpt) {
+	case 1:
+		play();
+		break;
+	default:
+		exit();
+	}
+}
+
+void play() {
+	// Game loop
+}
+
+int random(int min, int max) {
+	return min + rand() / (RAND_MAX / (max - min + 1) + 1);
+}
+
+int cpuChoice() {
+	// CPU player choice
+	return random(1, 3);
+}
+
+void loadHiScore() {
+	// read high score from file, if doesnt exist then create file and set HS to 0
+
+}
+
+void saveHiScore() {
+	// save high score to file
+}

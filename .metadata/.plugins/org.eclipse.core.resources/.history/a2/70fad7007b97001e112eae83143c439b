@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+	int x = 0;
+	int y = 21;
+
+	do {
+		if (x == 5) {
+			continue;
+		}
+		printf("%d\n", x);
+		x++;
+	} while (x <= y);
+
+	return 0;
+}

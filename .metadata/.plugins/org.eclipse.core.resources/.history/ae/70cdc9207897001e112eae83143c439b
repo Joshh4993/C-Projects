@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+	int myNum = 15;
+	char myLetter = 'C';
+	int x, y, z;
+
+	printf("%d\n\n", x + y + z);
+
+	printf("My number is %d and my letter is %c\n\n", myNum, myLetter);
+	//for loop
+	for (int i = 0; i < 10; ++i) {
+		myNum++;
+		x = myNum % 3;
+		y = myNum % 2;
+		z = x + y;
+		printf("X: %d ", x);
+		printf("Y: %d ", y);
+		printf("Z: %d\n\n", z);
+	}
+	return 0;
+}

@@ -1,0 +1,15 @@
+20:13:36 **** Incremental Build of configuration Release for project rockpaperscissors ****
+make all 
+Building file: ../rps.c
+Invoking: Cygwin C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"rps.d" -MT"rps.o" -o "rps.o" "../rps.c"
+Finished building: ../rps.c
+ 
+Building target: rockpaperscissors.exe
+Invoking: Cygwin C Linker
+gcc  -o "rockpaperscissors.exe" ./rps.o   
+Finished building target: rockpaperscissors.exe
+ 
+
+20:13:39 Build Finished. 0 errors, 0 warnings. (took 3s.129ms)
+

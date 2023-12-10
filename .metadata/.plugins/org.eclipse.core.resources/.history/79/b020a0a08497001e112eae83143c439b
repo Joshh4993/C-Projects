@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+void qs(int arr[], int lo, int hi);
+int partition(int arr[], int lo, int hi);
+
+int main() {
+	int numbers[] = {7, 2, 0, 1, 2, 4, 6, 1};
+	int length = sizeof(numbers) / sizeof(numbers[0]);
+
+	printf("Unsorted array:\n");
+	for (int n = 0; n < length; n++) {
+		printf("%d ", numbers[n]);
+	}
+
+	printf("\n\nSorting Array..\n\n");
+
+	qs(numbers, 0, length - 1);
+
+	printf("Sorted array:\n");
+		for (int n = 0; n < length; n++) {
+			printf("%d ", numbers[n]);
+		}
+
+	return 0;
+}
+
+void qs(int arr[], int lo, int hi) {
+	if (lo >= hi) {
+		return;
+	}
+
+	const int pivotIdx = partition(arr, lo, hi);
+
+	qs(arr, lo, pivotIdx - 1);
+	qs(arr, pivotIdx + 1, hi);
+}
+
+int partition(int arr[], int lo, int hi) {
+	int pivot = arr[hi];
+
+	int idx = lo - 1;
+
+	for (int i = lo; i < hi; ++i) {
+		if (arr[i] <= pivot) {
+			idx++;
+			int temp = arr[i];
+			arr[i] = arr[idx];
+			arr[idx] = temp;
+		}
+	}
+
+	idx++;
+	arr[hi] = arr[idx];
+	arr[idx] = pivot;
+
+	return idx;
+}

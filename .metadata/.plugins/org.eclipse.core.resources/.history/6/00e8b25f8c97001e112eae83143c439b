@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+struct myStructure {
+	int myNum;
+	char myLetter;
+	char myString[30];
+};
+
+
+int main() {
+	struct myStructure s1;
+
+	s1.myNum = 13;
+	s1.myLetter = 'B';
+
+	strcpy(s1.myString, "Some text");
+
+	printf("My string: %s\n", s1.myString);
+
+	return 0;
+}

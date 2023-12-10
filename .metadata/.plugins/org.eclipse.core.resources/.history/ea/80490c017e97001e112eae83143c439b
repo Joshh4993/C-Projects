@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int main() {
+	int userNum;
+
+	printf("Type a number: \n");
+
+	scanf("%d", &userNum);
+
+	printf("Your number is: %d", userNum);
+
+	return 0;
+}

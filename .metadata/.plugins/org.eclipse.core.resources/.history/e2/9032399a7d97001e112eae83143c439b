@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int main() {
+	char str1[] = "Hello";
+	char str2[] = "Hello";
+	char str3[] = "Hi";
+
+	//return 0 (equal)
+	printf("%d\n", strcmp(str1, str2));
+
+	//return -4 (not equal)
+	printf("%d\n", strcmp(str1, str3));
+
+	return 0;
+}

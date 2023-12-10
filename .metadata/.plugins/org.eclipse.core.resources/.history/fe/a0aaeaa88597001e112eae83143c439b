@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+	FILE *fptr;
+
+	fptr = fopen("data.txt", "r");
+
+	char fileString[100];
+
+	while(fgets(fileString, 100, fptr)) {
+		printf("%s", fileString);
+	}
+
+	fclose(fptr);
+
+	return 0;
+}

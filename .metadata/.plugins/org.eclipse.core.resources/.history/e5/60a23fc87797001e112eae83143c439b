@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+	int myNum = 15;
+	char myLetter = 'C';
+	int x = 5, y = 2, z = 5;
+
+	printf("%d\n\n", x + y + z);
+
+	printf("My number is %d and my letter is %c\n\n", myNum, myLetter);
+	//for loop
+	for (int i = 0; i < 10; ++i) {
+		myNum++;
+		int secondNum = myNum % 3;
+		printf("My number is now %d\n", secondNum);
+	}
+	return 0;
+}

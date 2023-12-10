@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+	FILE *fptr;
+
+	fptr = fopen("data.txt", "w");
+
+	fprintf(fptr, "New content");
+
+	fclose(fptr);
+
+	return 0;
+}

@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int myFunct(int x) {
+	return 209 + x;
+}
+
+int main() {
+	printf("Result is: %d", myFunct(10));
+
+	return 0;
+}

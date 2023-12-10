@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+	float myFloat = 2.5;
+	double myDouble = 19.99;
+
+	printf("%.2f\n", myFloat);
+	printf("%lf", myDouble);
+
+	return 0;
+}

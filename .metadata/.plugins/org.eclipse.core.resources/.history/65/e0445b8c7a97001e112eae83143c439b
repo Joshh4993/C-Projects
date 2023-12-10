@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+	int x = 20;
+	int y = 21;
+	bool isGreater = false;
+
+
+	isGreater = (x > y) ? true : false;
+
+	printf("Fun: %d\n", isGreater);
+
+	return 0;
+}

@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int main() {
+	int age = 42;
+	int* ptr = &age;
+
+	printf("%d\n", age); // output value of age
+	printf("%p\n", &age); // output mem addr of age
+	printf("%p\n", ptr); // output mem adr of age with the pointer
+
+	return 0;
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+	const PI = 3.14159265;
+	int diameter = 15;
+	bool isProgrammingFun = true;
+
+	printf("Fun: %d\n", isProgrammingFun);
+
+	return 0;
+}

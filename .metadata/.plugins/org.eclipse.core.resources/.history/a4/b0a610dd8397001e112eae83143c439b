@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <sys/time.h>
+
+void qs(int arr[], int lo, int hi);
+int partition(int arr[], int lo, int hi);
+
+int main() {
+	struct timespec start, end;
+
+
+	int numbers[] = {7, 2, 0, 1, 2, 4, 6, 1};
+	int length = sizeof(numbers) / sizeof(numbers[0]);
+
+	printf("Unsorted array:\n");
+	for (int n = 0; n < length; n++) {
+		printf("%d ", numbers[n]);
+	}
+
+	printf("\n\nSorting Array..\n\n");
+
+	clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+
+	qs(numbers, 0, length - 1);
+
+	clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+
+	printf("Sorted array:\n");
+		for (int n = 0; n < length; n++) {
+			printf("%d ", numbers[n]);
+		}
+
+	uint64_t delta_us = (end.tv_sec - start.tv_sec) * 1000000 + (end.tv_nsec - start.tv_nsec) / 1000;
+	printf("\nQuick Sort took: %lu us", delta_us);
+
+	return 0;
+}
+
+void qs(int arr[], int lo, int hi) {
+	if (lo >= hi) {
+		return;
+	}
+
+	const int pivotIdx = partition(arr, lo, hi);
+
+	qs(arr, lo, pivotIdx - 1);
+	qs(arr, pivotIdx + 1, hi);
+}
+
+int partition(int arr[], int lo, int hi) {
+	int pivot = arr[hi];
+
+	int idx = lo - 1;
+
+	for (int i = lo; i < hi; ++i) {
+		if (arr[i] <= pivot) {
+			idx++;
+			int temp = arr[i];
+			arr[i] = arr[idx];
+			arr[idx] = temp;
+		}
+	}
+
+	idx++;
+	arr[hi] = arr[idx];
+	arr[idx] = pivot;
+
+	return idx;
+}

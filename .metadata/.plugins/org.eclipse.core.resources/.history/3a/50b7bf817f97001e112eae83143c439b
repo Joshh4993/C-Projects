@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int main() {
+	int numbers[4] = {25,50,75,100};
+
+	printf("%d", *(numbers +1));
+
+	return 0;
+}

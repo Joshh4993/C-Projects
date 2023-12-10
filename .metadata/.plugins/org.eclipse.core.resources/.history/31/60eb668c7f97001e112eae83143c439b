@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+void myFunct(int num) {
+	printf("I just got executed: %d\n", num);
+}
+
+int main() {
+	for (int j = 0; j < 10; ++j) {
+		myFunct(j);
+	}
+}
